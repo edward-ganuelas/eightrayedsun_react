@@ -1,0 +1,51 @@
+@import "../../scss/globals";
+
+img.logo {width: 25%; height: 25%;}
+.navbar{
+	margin-bottom: 0;
+	border-radius: 0;
+}
+.navbar-default{
+	background-color: $mainBlue;
+	border-color: $mainBlue;
+	.navbar-header{
+		.navbar-brand{
+			img{
+				margin-top: -5px;
+			}
+		}
+	}
+	.navbar-nav{
+		li{
+			a{
+				color: $orange;
+				&:hover{
+					color:$darkOrange;
+				};
+			}
+		}
+		
+	}
+	h1{
+		display: inline;
+		font-family: 'Lora', sans-serif;
+		a{
+			color: #000!important;
+			font-size: 2rem;
+		}
+	}
+}
+.header{
+	background-color: $mainBlue;
+	margin-bottom: 0;
+	h1{
+		text-align: center;
+		color: $purple;
+	}
+	@media (min-width: 426px){
+		// background-image: url(/images/eightray_logo_new.png);
+		background-position: 75% center;
+		background-repeat: no-repeat;
+		background-size: auto;
+	}
+}
