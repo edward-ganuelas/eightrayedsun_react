@@ -7,7 +7,7 @@ import './App.scss';
 function App() {
   return (
     <div className="App">
-        {/* <NavBar /> */}
+        <NavBar />
         <Jumbotron title="EightRayedSun" />
         <div className="wrapper"></div>
 
