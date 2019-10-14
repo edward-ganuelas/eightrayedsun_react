@@ -1,6 +1,7 @@
 import React from 'react';
 import NavBar from "./components/navbar/navbar";
 import Jumbotron from "./components/jumbotron/jumbotron";
+import Footer from "./components/footer/footer";
 import './App.scss';
 
 function App() {
@@ -8,6 +9,9 @@ function App() {
     <div className="App">
         {/* <NavBar /> */}
         <Jumbotron title="EightRayedSun" />
+        <div className="wrapper"></div>
+
+        <Footer />
     </div>
   );
 }
