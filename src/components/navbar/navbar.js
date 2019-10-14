@@ -16,13 +16,13 @@ function App() {
                     </div>
                     <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul className="nav navbar-nav navbar-right">
-                            <li><a className="nav-item" href="/">Home</a></li>
-                            <li><a href="/documents/Edward_Ganuelas_Resume_05_22_2018.pdf" className="nav-item" target="_blank">Resume</a></li>
-                            <li><a href="https://blog.eightrayedsun.com/" className="nav-item">Blog</a></li>
-                            <li><a href="https://ca.linkedin.com/in/epganuelas" className="nav-item" target="_blank">LinkedIn</a></li>
-                            <li><a href="http://pokedex.eightrayedsun.com" className="nav-item" target="_blank">Pokedex Project</a></li>
-                            <li><a href="/about" className="nav-item">About</a></li>
-                            <li><a className="button is-primary is-inverted" href="https://www.github.com/edward-ganuelas" target="_blank">
+                            <li className="nav-item"><a href="/" className="nav-link">Home</a></li>
+                            <li className="nav-item"><a href="/documents/Edward_Ganuelas_Resume_05_22_2018.pdf" className="nav-link" target="_blank" rel="noopener noreferrer">Resume</a></li>
+                            <li className="nav-item"><a href="https://blog.eightrayedsun.com/" className="nav-link">Blog</a></li>
+                            <li className="nav-item"><a href="https://ca.linkedin.com/in/epganuelas" className="nav-link" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                            <li className="nav-item"><a href="http://pokedex.eightrayedsun.com" className="nav-link" target="_blank" rel="noopener noreferrer">Pokedex Project</a></li>
+                            <li className="nav-item"><a href="/about" className="nav-link">About</a></li>
+                            <li className="nav-item"><a className="button is-primary is-inverted" href="https://www.github.com/edward-ganuelas" target="_blank" rel="noopener noreferrer">
                                     <span className="icon">
                                         <i className="fa fa-github"></i>
                                     </span>
