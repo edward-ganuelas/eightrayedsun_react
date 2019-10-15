@@ -1,7 +1,10 @@
 import React from 'react';
+import Jumbotron from "../../components/jumbotron/jumbotron";
 
 export default () => {
   return (
+<>
+    <Jumbotron title="About" />
     <div className="container introCopy">
         <div className="row">
             <div className="col-12">
@@ -15,5 +18,6 @@ export default () => {
             </div>
         </div>
     </div>
+</>
   );
 }
