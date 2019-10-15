@@ -7,7 +7,7 @@ export default () => {
     <footer className="container-fluid end">
         <div className="container">
             <div className="row">
-                <div className="col-sm-12">
+                <div className="col-12">
                     <h4>EightRayedSun</h4>
                     <ul>
                         <li><Link to="/">Home</Link></li>

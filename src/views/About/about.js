@@ -1,5 +1,6 @@
 import React from 'react';
 import Jumbotron from "../../components/jumbotron/jumbotron";
+import './about.scss';
 
 export default () => {
   return (

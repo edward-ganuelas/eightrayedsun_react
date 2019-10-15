@@ -29,7 +29,7 @@ export default () => {
                 <span className="sr-only">Toggle navigation</span>
                 <span className="navbar-toggler-icon"></span>
             </button>
-            <Link to="/" className="navbar-brand">
+            <Link to="/">
                 <img src="/images/logo.svg" width="30px" height="30px" alt="EightRayedSun" />
             </Link>
         </div>

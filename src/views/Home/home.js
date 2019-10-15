@@ -8,7 +8,7 @@ export default () => {
 <div className="container-fluid">
     <section className="container introCopy">
         <div className="row">
-            <div className="col-xs-12">
+            <div className="col-12">
                 <h2>Hi, my name is Edward Paulo Ganuelas and I am a developer.</h2>
                 <p>I got started with coding back at grade school with some small lessons in BASIC and tried (and failed) to learn how to make video games by learning C.<br />
                    During High School I got introduced to HTML 4,
@@ -35,7 +35,7 @@ export default () => {
 <div className="container-fluid skills">
     <div className="container">
         <div className="row">
-            <div className="col-xs-12">
+            <div className="col-12">
                 <section>
                     <h2>Skills</h2>
                     <table>
@@ -113,7 +113,7 @@ export default () => {
 <div className="container-fluid">
 <div className="container experience">
     <div className="row">
-        <div className="col-xs-12">
+        <div className="col-12">
             <h2>Experience</h2>
             <h3><a href="http://mccann.ca" target="_blank" rel="noopener noreferrer">McCann Canada</a>: <br />Programmer 2013-Current <br />Programming Intern 2012-2013</h3>
             <p>Role: Full Stack Developer.</p>
