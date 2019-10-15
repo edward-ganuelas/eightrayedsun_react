@@ -12,10 +12,10 @@ import './App.scss';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" id="App">
         <Router>
             <NavBar />
-            <div className="wrapper">
+            <div className="wrapper" id="wrapper">
                 <Switch>
                     <Route exact path="/">
                         <Home />
