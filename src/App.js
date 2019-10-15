@@ -1,6 +1,5 @@
 import React from 'react';
 import NavBar from "./components/navbar/navbar";
-import Jumbotron from "./components/jumbotron/jumbotron";
 import Home from "./views/Home/home";
 import About from "./views/About/about";
 import Footer from "./components/footer/footer";
@@ -16,7 +15,6 @@ function App() {
     <div className="App">
         <Router>
             <NavBar />
-            <Jumbotron title="EightRayedSun" />
             <div className="wrapper">
                 <Switch>
                     <Route exact path="/">
