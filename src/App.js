@@ -14,10 +14,10 @@ import './App.scss';
 function App() {
   return (
     <div className="App">
-        <NavBar />
-        <Jumbotron title="EightRayedSun" />
-        <div className="wrapper">
-            <Router>
+        <Router>
+            <NavBar />
+            <Jumbotron title="EightRayedSun" />
+            <div className="wrapper">
                 <Switch>
                     <Route exact path="/">
                         <Home />
@@ -26,9 +26,9 @@ function App() {
                         <About />
                     </Route>
                 </Switch>
-            </Router>
-        </div>
+            </div>
         <Footer />
+        </Router>
     </div>
   );
 }
