@@ -1,0 +1,25 @@
+@import '../../scss/globals';
+
+footer.end{
+	height: 150px;
+	position: absolute;
+	background-color: $darkBlue;
+	width: 100%;
+	color: #FFF;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+	ul{
+		list-style-type: none;
+		padding:0;
+		li{
+			display: inline-block;
+			margin-right: 8px;
+		}
+	}
+	a{
+		color: #FFF;
+		text-decoration: underline;
+	}
+	
+}

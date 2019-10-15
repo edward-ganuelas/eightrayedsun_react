@@ -1,0 +1,138 @@
+@import 'scss/boostrap';
+@import 'scss/globals';
+@import url('https://fonts.googleapis.com/css?family=Lora|Open+Sans');
+
+body{
+	font-family: 'Open Sans', sans-serif; 
+    background-color: #FFF;
+    color: #333;
+	position: relative;
+	background-color: #fafafa;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Open Sans', sans-serif;
+}
+.jumbotron h1{
+	font-family: 'Lora';
+}
+h2{
+	margin-bottom: 30px;
+}
+p {font-size: 16px;}
+a, a:focus, a:hover {color: $mainBlue;}
+a{
+	color: $darkBlue;
+	&:focus{
+		color: $darkBlue;
+	}
+	&:hover{
+		color: $purple;
+	}
+}
+.wrapper{
+	min-height: 100%;
+	padding-bottom: 150px;
+	position: relative;
+	.wrapper:after{
+		content: "";
+	}
+}
+table{
+	width: 100%;
+	margin:0;
+    padding:0;
+    border-collapse: collapse;
+    border-spacing: 0;
+	th{
+		vertical-align: text-top;
+		width: 20%;
+	}
+	td{
+		vertical-align: text-top;
+		width: 20%;
+	}
+	@media screen and (max-width: 600px) {
+		thead{
+			display: none;
+		}
+		tr{
+			margin-bottom: 10px;
+			display: block;
+		}
+		td{
+			display: block;
+			width: 100%;
+			text-align: right;
+			border-bottom: 1px solid black;
+			&:before{
+				content: attr(data-label);
+				float: left;
+				text-transform: uppercase;
+				font-weight: bold;
+			}
+			ul{
+				list-style-type: none;
+			}
+		}
+	}
+}
+.introCopy, .experience{
+	padding: 30px 0;
+}
+.skills{
+    padding-left: 0;
+	padding-right: 0;
+	background-image: url(/images/skills.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	.container{
+		background-color: $opagueOrange;
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	@media (min-width: 426px){
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+@media screen and (max-width: 768px){
+.hero.is-info .nav-menu{
+	background-color: #ff9900;
+}
+
+.hero.is-info .nav-menu a{
+	color: #0066FF;
+}
+}
+a.more-link, a.view-article {display: none;}
+.card{
+	margin-bottom: 20px;
+}
+.blogItem{
+	padding-bottom: 10px;
+	border-radius: 5px;
+	border: 1px solid $orange;
+	margin-bottom: 20px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+ 	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+	&:hover{
+		box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	}
+	&:first-of-type{
+		padding-top: 10px;
+		margin-top: 10px;
+	}
+	.card-footer{
+		text-align: center;
+	}
+}
+
+.blogPost{
+	padding: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	border: 1px solid $orange;
+}
