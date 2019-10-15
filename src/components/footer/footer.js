@@ -10,9 +10,9 @@ export default () => {
                 <div className="col-sm-12">
                     <h4>EightRayedSun</h4>
                     <ul>
-                        <li><Link href="/">Home</Link></li>
+                        <li><Link to="/">Home</Link></li>
                         {/* <li><a href="/blog">Blog</a></li> */}
-                        <li><Link href="/about">About</Link></li>
+                        <li><Link to="/about">About</Link></li>
                     </ul>
                     <p>Email me at <a href="mailto:epganuelas@gmail.com">epganuelas@gmail.com</a></p>
                 </div>
