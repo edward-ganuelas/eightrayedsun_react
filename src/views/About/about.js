@@ -9,7 +9,7 @@ export default () => {
         <div className="row">
             <div className="col-12">
                 <p>This webpage is being hosted on a Digital Ocean droplet and is built using the following open source technologies:</p>
-                    {/* <p><a href="https://laravel.com/" target="_blank" rel="noopener noreferrer">Laravel</a></p> */}
+                    <p><a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">React.js</a></p>
                     <p><a href="http://getbootstrap.com/" target="_blank" rel="noopener noreferrer">Bootstrap</a></p>
                     <p><a href="http://sass-lang.com/" target="_blank" rel="noopener noreferrer">Sass</a></p>
                     <p>My <a href="/blog">blog</a> is powered by vue.js + directus REST api. 
