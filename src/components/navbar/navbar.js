@@ -25,10 +25,6 @@ export default () => {
 <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
     <div className="container">
         <div className="navbar-header">
-            <button type="button" className="navbar-toggler" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span className="sr-only">Toggle navigation</span>
-                <span className="navbar-toggler-icon"></span>
-            </button>
             <Link to="/">
                 <img src="/images/logo.svg" width="30px" height="30px" alt="EightRayedSun" />
             </Link>
