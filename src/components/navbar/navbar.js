@@ -15,7 +15,7 @@ export default () => {
     <Link to="/about" className="menu-item">About</Link>
     <a className="button is-primary is-inverted menu-item" href="https://www.github.com/edward-ganuelas" target="_blank" rel="noopener noreferrer">
         <span className="icon">
-            <i className="fa fa-github"></i>
+        <i className="fab fa-github"></i>
         </span>
         <span>
         Github

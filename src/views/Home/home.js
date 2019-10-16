@@ -41,11 +41,11 @@ export default () => {
                     <table>
                         <thead>
                             <tr>
-                                <th>Front End <i className="fa fa-code" aria-hidden="true"></i></th>
-                                <th>Back End <i className="fa fa-terminal" aria-hidden="true"></i></th>
-                                <th>Operating Systems <i className="fa fa-windows" aria-hidden="true"></i></th>
-                                <th>Version Control <i className="fa fa-code-fork" aria-hidden="true"></i></th>
-                                <th>Issue Tracker <i className="fa fa-ticket" aria-hidden="true"></i></th>
+                                <th>Front End <i className="fas fa-code" aria-hidden="true"></i></th>
+                                <th>Back End <i className="fas fa-terminal" aria-hidden="true"></i></th>
+                                <th>Operating Systems <i className="fab fa-windows" aria-hidden="true"></i></th>
+                                <th>Version Control <i className="fas fa-code-branch" aria-hidden="true"></i></th>
+                                <th>Issue Tracker <i className="fas fa-ticket-alt" aria-hidden="true"></i></th>
                             </tr>
                         </thead>
                         <tbody>
