@@ -7,7 +7,10 @@ img.logo {width: 25%; height: 25%;}
 }
 nav{
 	&.navbar {
-		background-color: $darkBlue;
+		position: fixed;
+		width: 100%;
+		z-index: 999;
+		background-color: transparent;
 		border-color: $darkBlue;
 	}
 	.navbar-header{
@@ -40,15 +43,10 @@ nav{
 .header{
 	background-color: $mainBlue;
 	margin-bottom: 0;
+	background: linear-gradient(to right, $darkOrange, $mainBlue 50%, $darkOrange);
 	h1{
 		text-align: center;
 		color: $purple;
-	}
-	@media (min-width: 426px){
-		// background-image: url(/images/eightray_logo_new.png);
-		background-position: 75% center;
-		background-repeat: no-repeat;
-		background-size: auto;
 	}
 }
 /* Position and sizing of burger button */

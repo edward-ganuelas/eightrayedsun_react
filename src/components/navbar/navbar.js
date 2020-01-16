@@ -26,7 +26,7 @@ export default () => {
     <div className="container">
         <div className="navbar-header">
             <Link to="/">
-                <img src="/images/logo.svg" width="30px" height="30px" alt="EightRayedSun" />
+                <img src="/images/eight.svg" width="32px" height="32px" alt="EightRayedSun" />
             </Link>
         </div>
     </div>
