@@ -6,11 +6,12 @@ import './blog.scss';
 class Blog extends React.Component{
     constructor(props) {
         super(props);
-        this.blogPosts = null;
-        this.savedPost = null;
+        this.state = {
+            blogPosts: []
+        }
     }
-    componentDidMount() {
-        this.getPosts();
+    async componentDidMount() {
+        await this.getPosts();
     }
     async getPosts() {
         if (_.isObject(this.savedPost)) {
@@ -21,15 +22,31 @@ class Blog extends React.Component{
                 blog_type: "tech"
             }
         });
-        console.log(response);
         // this.savedPost = response.data;
+        this.setState({
+            blogPosts: response.data
+        });
+        console.log(this.savedPost);
     }
+    BlogPosts = (props) => {
+        const blogPosts = props.blogPosts;
+        return blogPosts.map((post) => {
+            return ( 
+                <div key={post.id}>
+                    <h2>{post.title}</h2>
+                    { post.excerpt &&
+                        <p>{post.excerpt}</p>
+                    }
+                </div>
+            );
+        });
+    } 
     render() {
         return (
             <>
-            <div className="container-fluid blog">
-                
-            </div>
+                <div className="container-fluid blog">
+                    <this.BlogPosts blogPosts={this.state.blogPosts} />
+                </div>
             </>
         );
     }
