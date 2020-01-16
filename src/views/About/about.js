@@ -6,7 +6,7 @@ export default () => {
   return (
 <>
     <Jumbotron title="About" />
-    <div className="container introCopy">
+    <div className="container introCopy section">
         <div className="row">
             <div className="col-12">
                 <p>This webpage is being hosted on a Digital Ocean droplet and is built using the following open source technologies:</p>
