@@ -7,7 +7,7 @@ img.logo {width: 25%; height: 25%;}
 }
 nav{
 	&.navbar {
-		background-color: $darkBlue;
+		background-color: transparent;
 		border-color: $darkBlue;
 	}
 	.navbar-header{
@@ -46,9 +46,10 @@ nav{
 	}
 	@media (min-width: 426px){
 		// background-image: url(/images/eightray_logo_new.png);
-		background-position: 75% center;
-		background-repeat: no-repeat;
-		background-size: auto;
+		// background-position: 75% center;
+		// background-repeat: no-repeat;
+		// background-size: auto;
+		background: linear-gradient(to right, $darkOrange, $mainBlue 50%, $darkOrange);
 	}
 }
 /* Position and sizing of burger button */
