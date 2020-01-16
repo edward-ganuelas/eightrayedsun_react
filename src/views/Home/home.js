@@ -5,7 +5,7 @@ export default () => {
   return (
 <>
 <Jumbotron title="EightRayedSun" />
-<div className="container-fluid">
+<div className="container-fluid section">
     <section className="container introCopy">
         <div className="row">
             <div className="col-12">
@@ -32,7 +32,7 @@ export default () => {
     </section>
 </div>
 
-<div className="container-fluid skills">
+<div className="container-fluid skills section">
     <div className="container">
         <div className="row">
             <div className="col-12">
@@ -110,7 +110,7 @@ export default () => {
         </div>
     </div>
 </div>
-<div className="container-fluid">
+<div className="container-fluid section">
 <div className="container experience">
     <div className="row">
         <div className="col-12">
