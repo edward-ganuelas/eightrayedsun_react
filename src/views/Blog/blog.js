@@ -23,7 +23,6 @@ class Blog extends React.Component{
                 blog_type: "tech"
             }
         });
-        // this.savedPost = response.data;
         this.setState({
             blogPosts: response.data
         });
