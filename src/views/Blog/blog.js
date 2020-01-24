@@ -26,13 +26,12 @@ class Blog extends React.Component{
         this.setState({
             blogPosts: response.data
         });
-        console.log(this.savedPost);
     }
     BlogPosts = (props) => {
         const blogPosts = props.blogPosts;
         return blogPosts.map((post) => {
             return ( 
-                <div key={post.id}>
+                <div className="col-12" key={post.id}>
                     <h2>{post.title}</h2>
                     { post.excerpt &&
                         <p>{post.excerpt}</p>
@@ -45,7 +44,11 @@ class Blog extends React.Component{
         return (
             <>
                 <div className="container-fluid blog">
-                    <this.BlogPosts blogPosts={this.state.blogPosts} />
+                    <div className="container">
+                        <div className="row">
+                            <this.BlogPosts blogPosts={this.state.blogPosts} />
+                        </div>
+                    </div>
                 </div>
             </>
         );
