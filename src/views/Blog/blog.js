@@ -1,6 +1,7 @@
 import React from 'react';
 import client from '../../directus';
 import BlogPosts from './BlogPosts/blogposts';
+import moment from 'moment';
 import _ from 'lodash';
 import './blog.scss';
 
@@ -23,8 +24,11 @@ class Blog extends React.Component{
                 blog_type: "tech"
             }
         });
+        const sortedBlogPostsByDate = response.data.sort((a, b) => {
+            return moment(b.publish_date, 'YYYY-MM-DD').unix() - moment(a.publish_date, 'YYYY-MM-DD').unix();
+        });
         this.setState({
-            blogPosts: response.data
+            blogPosts: sortedBlogPostsByDate
         });
     }
     render() {
