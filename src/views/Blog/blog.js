@@ -1,5 +1,6 @@
 import React from 'react';
 import client from '../../directus';
+import BlogPosts from './BlogPosts/blogposts';
 import _ from 'lodash';
 import './blog.scss';
 
@@ -27,26 +28,13 @@ class Blog extends React.Component{
             blogPosts: response.data
         });
     }
-    BlogPosts = (props) => {
-        const blogPosts = props.blogPosts;
-        return blogPosts.map((post) => {
-            return ( 
-                <div className="col-12" key={post.id}>
-                    <h2>{post.title}</h2>
-                    { post.excerpt &&
-                        <p>{post.excerpt}</p>
-                    }
-                </div>
-            );
-        });
-    } 
     render() {
         return (
             <>
                 <div className="container-fluid blog">
                     <div className="container">
                         <div className="row">
-                            <this.BlogPosts blogPosts={this.state.blogPosts} />
+                            <BlogPosts blogPosts={this.state.blogPosts} />
                         </div>
                     </div>
                 </div>
