@@ -11,10 +11,10 @@ class Blog extends React.Component{
         super(props);
         this.state = {
             blogPosts: [],
-            selectedTag: '',
-            tags: ['clear'],
+            tags: [],
             blogTags: [],
-            processedBlogPosts: []
+            processedBlogPosts: [],
+            tagButtons: []
         }
     }
     async componentDidMount() {
@@ -24,21 +24,22 @@ class Blog extends React.Component{
         this.setState({
             blogPosts,
             blogTags,
-            tags: [this.state.tags, ...tags.map(tag => tag.tag)],
+            tags,
+            tagButtons: ['clear', ...tags.map(tag => tag.tag)],
             processedBlogPosts: this.processBlogPosts(blogPosts)
         });
     }
-    processBlogPosts(blogPosts) {
+    processBlogPosts(blogPosts, filter = 'clear') {
         return blogPosts.map((blogPost) => {
             const filteredBlogTags = this.state.blogTags.filter(blogTag => blogTag.blog_id === blogPost.id).map(blogTag => blogTag.tags_id);
             const filteredTags = this.state.tags.filter(tag => filteredBlogTags.includes(tag.id)).map(tag => tag.tag).sort((a,b) => a - b);
-            blogPost.tags = filteredTags;
+            blogPost.tags = filteredTags; 
             return blogPost;
         }).filter(blogPost => {
-            if (this.state.selectedTag === '') {
+            if (filter === 'clear') {
                 return true;
             }
-            return blogPost.tags.includes(this.state.selectedTag);
+            return blogPost.tags.includes(filter);
         })
     }
     async getPosts() {
@@ -67,16 +68,9 @@ class Blog extends React.Component{
         });
         return response.data;
     }
-    setSelectedTag(tag) {
-        const selectedTag = tag === 'clear' ? '' : tag;
-        this.setState({
-            selectedTag: selectedTag
-        });
-    }
     tagClicked(tag) {
-        this.setSelectedTag(tag);
         this.setState({
-            processedBlogPosts: this.processBlogPosts(this.state.blogPosts)
+            processedBlogPosts: this.processBlogPosts(this.state.blogPosts, tag)
         });
     }
     render() {
@@ -85,7 +79,7 @@ class Blog extends React.Component{
                 <div className="container-fluid blog">
                     <div className="container">
                         <div className="row">
-                            <Filters tags={this.state.tags} />
+                            <Filters tags={this.state.tagButtons} tagClick={this.tagClicked.bind(this)} />
                             <BlogPosts blogPosts={this.state.processedBlogPosts} />
                         </div>
                     </div>
