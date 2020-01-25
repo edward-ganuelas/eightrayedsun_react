@@ -7,7 +7,7 @@ export default (props) => {
         <div className="col-12 filters">
             <ul>
                 {
-                    tags.map(tag => <li><button>{tag}</button></li>)
+                    tags.map((tag, index) => <li key={index}><button>{tag}</button></li>)
                 }
             </ul>
         </div>

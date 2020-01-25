@@ -12,7 +12,9 @@ class Blog extends React.Component{
         this.state = {
             blogPosts: [],
             selectedTag: '',
-            tags: ['clear']
+            tags: ['clear'],
+            blogTags: [],
+            processedBlogPosts: []
         }
     }
     async componentDidMount() {
@@ -20,14 +22,24 @@ class Blog extends React.Component{
         const blogTags = await this.getBlogTags();
         const blogPosts = await this.getPosts();
         this.setState({
-            blogPosts: blogPosts.map((blogPost) => {
-                const filteredBlogTags = blogTags.filter(blogTag => blogTag.blog_id === blogPost.id).map(blogTag => blogTag.tags_id);
-                const filteredTags = tags.filter(tag => filteredBlogTags.includes(tag.id)).map(tag => tag.tag).sort((a,b) => a - b);
-                blogPost.tags = filteredTags;
-                return blogPost;
-            }),
-            tags: [this.state.tags, ...tags.map(tag => tag.tag)]
+            blogPosts,
+            blogTags,
+            tags: [this.state.tags, ...tags.map(tag => tag.tag)],
+            processedBlogPosts: this.processBlogPosts(blogPosts)
         });
+    }
+    processBlogPosts(blogPosts) {
+        return blogPosts.map((blogPost) => {
+            const filteredBlogTags = this.state.blogTags.filter(blogTag => blogTag.blog_id === blogPost.id).map(blogTag => blogTag.tags_id);
+            const filteredTags = this.state.tags.filter(tag => filteredBlogTags.includes(tag.id)).map(tag => tag.tag).sort((a,b) => a - b);
+            blogPost.tags = filteredTags;
+            return blogPost;
+        }).filter(blogPost => {
+            if (this.state.selectedTag === '') {
+                return true;
+            }
+            return blogPost.tags.includes(this.state.selectedTag);
+        })
     }
     async getPosts() {
         if (_.isObject(this.savedPost)) {
@@ -55,6 +67,18 @@ class Blog extends React.Component{
         });
         return response.data;
     }
+    setSelectedTag(tag) {
+        const selectedTag = tag === 'clear' ? '' : tag;
+        this.setState({
+            selectedTag: selectedTag
+        });
+    }
+    tagClicked(tag) {
+        this.setSelectedTag(tag);
+        this.setState({
+            processedBlogPosts: this.processBlogPosts(this.state.blogPosts)
+        });
+    }
     render() {
         return (
             <>
@@ -62,7 +86,7 @@ class Blog extends React.Component{
                     <div className="container">
                         <div className="row">
                             <Filters tags={this.state.tags} />
-                            <BlogPosts blogPosts={this.state.blogPosts} />
+                            <BlogPosts blogPosts={this.state.processedBlogPosts} />
                         </div>
                     </div>
                 </div>
