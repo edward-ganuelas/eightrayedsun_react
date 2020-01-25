@@ -9,11 +9,21 @@ class Blog extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            blogPosts: []
+            blogPosts: [],
         }
     }
     async componentDidMount() {
-        await this.getPosts();
+        const tags = await this.getTags();
+        const blogTags = await this.getBlogTags();
+        const blogPosts = await this.getPosts();
+        this.setState({
+            blogPosts: blogPosts.map((blogPost) => {
+                const filteredBlogTags = blogTags.filter(blogTag => blogTag.blog_id === blogPost.id).map(blogTag => blogTag.tags_id);
+                const filteredTags = tags.filter(tag => filteredBlogTags.includes(tag.id)).map(tag => tag.tag).sort((a,b) => a - b);
+                blogPost.tags = filteredTags;
+                return blogPost;
+            })
+        });
     }
     async getPosts() {
         if (_.isObject(this.savedPost)) {
@@ -27,9 +37,19 @@ class Blog extends React.Component{
         const sortedBlogPostsByDate = response.data.sort((a, b) => {
             return moment(b.publish_date, 'YYYY-MM-DD').unix() - moment(a.publish_date, 'YYYY-MM-DD').unix();
         });
-        this.setState({
-            blogPosts: sortedBlogPostsByDate
+        return sortedBlogPostsByDate;
+    }
+    async getBlogTags() {
+        const response = await client.getItems('blog_tags');
+        return response.data;
+    }
+    async getTags() {
+        const response = await client.getItems('tags', {
+            filter: {
+                tag_type: 'tech',
+            }
         });
+        return response.data;
     }
     render() {
         return (
