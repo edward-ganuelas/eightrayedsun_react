@@ -4,6 +4,7 @@ import Home from "./views/Home/home";
 import About from "./views/About/about";
 import Blog from "./views/Blog/blog";
 import Footer from "./components/footer/footer";
+import BlogPost from './components/blog/blogPost/blogPost';
 import {
     BrowserRouter as Router,
     Switch,
@@ -27,6 +28,7 @@ function App() {
                         <Route exact path="/blog">
                             <Blog />
                         </Route>
+                        <Route path="/blog/:id" render={(props) => <BlogPost {...props} />} />
                     </Switch>
                 </div>
             <Footer />

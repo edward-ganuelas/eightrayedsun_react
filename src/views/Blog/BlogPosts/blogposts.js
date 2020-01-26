@@ -1,8 +1,10 @@
 import React from 'react';
 import './blogposts.scss';
 import moment from 'moment';
+import { Link, useRouteMatch } from "react-router-dom";
 
 export default (props) => {
+    let { path } = useRouteMatch();
     const blogPosts = props.blogPosts;
         return blogPosts.map((post) => {
             return ( 
@@ -16,6 +18,7 @@ export default (props) => {
                     { post.excerpt &&
                         <p>{post.excerpt}</p>
                     }
+                    <p><Link to={`${path}/${post.id}`}>Read more</Link></p>
                 </div>
             );
         });
