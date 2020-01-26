@@ -7,9 +7,10 @@ export default (props) => {
     return (
         <div className="col-12 filters">
             <ul>
+                <li>Filter by tags: </li>
                 {
                     tags.map((tag, index) => <li key={index}>
-                            <button onClick={() => click(tag)}>{tag}</button>
+                            <button className='btn btn-dark' onClick={() => click(tag)}>{tag}</button>
                         </li>)
                 }
             </ul>
