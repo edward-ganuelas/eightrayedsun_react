@@ -25,7 +25,7 @@ export default class BlogPost extends React.Component {
 
     render() {
         return (
-            <div className='container blogPost'>
+            <div className='container' id='blogPost'>
                 <div className='row'>
                     <div className='col-12'>
                         {
