@@ -2,6 +2,7 @@ import React from 'react';
 import client from '../../directus';
 import BlogPosts from './BlogPosts/blogposts';
 import Filters from '../../components/blog/filters/filters';
+import Jumbotron from "../../components/jumbotron/jumbotron";
 import moment from 'moment';
 import _ from 'lodash';
 import './blog.scss';
@@ -75,16 +76,26 @@ class Blog extends React.Component{
     }
     render() {
         return (
-            <>
-                <div className="container-fluid blog">
-                    <div className="container">
-                        <div className="row">
-                            <Filters tags={this.state.tagButtons} tagClick={this.tagClicked.bind(this)} />
-                            <BlogPosts blogPosts={this.state.processedBlogPosts} />
+            <div className="blog">
+                <Jumbotron title="Blog" />
+                <div className="container-fluid">
+                    <div className="col-12">
+                        <div className="container">
+                            <div className="row">
+                                <Filters tags={this.state.tagButtons} tagClick={this.tagClicked.bind(this)} />
+                                <BlogPosts blogPosts={this.state.processedBlogPosts} />
+                            </div>
                         </div>
                     </div>
                 </div>
-            </>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12">
+                            <p>Photo by <a href="https://unsplash.com/@patrickian4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Patrick Fore</a> on <a href="https://unsplash.com/s/photos/blog?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         );
     }
 }
