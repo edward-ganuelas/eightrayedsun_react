@@ -31,7 +31,7 @@ function App() {
                         <Route path="/blog/:id" render={(props) => <BlogPost {...props} />} />
                     </Switch>
                 </div>
-            <Footer />
+                <Footer />
             </Router>
         </div>
     );
