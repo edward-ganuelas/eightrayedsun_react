@@ -44,10 +44,13 @@ nav{
 .header{
 	background-color: $mainBlue;
 	margin-bottom: 0;
-	background: linear-gradient(to right, $darkOrange, $mainBlue 50%, $darkOrange);
+	background: url(/images/Z50_1435.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 	h1{
 		text-align: center;
-		color: $purple;
+		color: #FFF;
 	}
 }
 /* Position and sizing of burger button */
