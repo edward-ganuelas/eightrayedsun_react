@@ -1,7 +1,7 @@
 import React from 'react';
 import Jumbotron from "../../components/jumbotron/jumbotron";
 
-export default () => {
+const Home = () => {
     return (
         <>
             <Jumbotron title="EightRayedSun" style={{ backgroundImage: 'url(/images/Z50_1435.jpg)'}} />
@@ -139,4 +139,5 @@ export default () => {
             </div>
         </>
     );
-}
+};
+export default Home;

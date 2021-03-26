@@ -3,7 +3,7 @@ import './blogposts.scss';
 import moment from 'moment';
 import { Link, useRouteMatch } from "react-router-dom";
 
-export default (props) => {
+const BlogPosts = (props) => {
     let { path } = useRouteMatch();
     const blogPosts = props.blogPosts;
         return blogPosts.map((post) => {
@@ -22,4 +22,5 @@ export default (props) => {
                 </div>
             );
         });
-}
+};
+export default BlogPosts;

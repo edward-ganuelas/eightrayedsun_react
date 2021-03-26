@@ -1,7 +1,7 @@
 import React from 'react';
 import './filters.scss';
 
-export default (props) => {
+const filters = (props) => {
     const tags = props.tags;
     const click = (tag) => props.tagClick(tag);
     return (
@@ -16,4 +16,5 @@ export default (props) => {
             </ul>
         </div>
     )
-}
+};
+export default filters;

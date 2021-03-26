@@ -2,7 +2,7 @@ import React from 'react';
 import Jumbotron from "../../components/jumbotron/jumbotron";
 import './about.scss';
 
-export default () => {
+const about = () => {
   return (
 <div className="about">
     <Jumbotron title="About" style={{backgroundImage: 'url(/images/skills.png)'}}/>
@@ -19,4 +19,5 @@ export default () => {
     </div>
 </div>
   );
-}
+};
+export default about
