@@ -5,7 +5,7 @@ import './about.scss';
 export default () => {
   return (
 <div className="about">
-    <Jumbotron title="About" />
+    <Jumbotron title="About" style={{backgroundImage: 'url(/images/skills.png)'}}/>
     <div className="container introCopy section">
         <div className="row">
             <div className="col-12">
