@@ -77,7 +77,7 @@ class Blog extends React.Component{
     render() {
         return (
             <div className="blog">
-                <Jumbotron title="Blog" />
+                <Jumbotron title="Blog" style={{backgroundImage: 'url(/images/patrick-fore-0gkw_9fy0eQ-unsplash.jpg)'}} />
                 <div className="container-fluid">
                     <div className="col-12">
                         <div className="container">

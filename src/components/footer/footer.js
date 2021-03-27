@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import './footer.scss';
 
-export default () => {
+const footer = () => {
     return (
         <footer className="container-fluid end">
             <div className="container">
@@ -20,4 +20,5 @@ export default () => {
             </div>
         </footer>
     );
-}
+};
+export default footer;

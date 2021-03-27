@@ -1,10 +1,10 @@
 import React from 'react';
 import Jumbotron from "../../components/jumbotron/jumbotron";
 
-export default () => {
+const Home = () => {
     return (
         <>
-            <Jumbotron title="EightRayedSun" />
+            <Jumbotron title="EightRayedSun" style={{ backgroundImage: 'url(/images/Z50_1435.jpg)'}} />
             <div className="container-fluid section">
                 <section className="container introCopy">
                     <div className="row">
@@ -32,7 +32,7 @@ export default () => {
                 </section>
             </div>
 
-            <div className="container-fluid skills section">
+            <div className="container-fluid skills section" style={{ backgroundImage: 'url(/images/skills.png)' }}>
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
@@ -139,4 +139,5 @@ export default () => {
             </div>
         </>
     );
-}
+};
+export default Home;

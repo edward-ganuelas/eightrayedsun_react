@@ -2,7 +2,7 @@ import React from 'react';
 
 function Jumbotron(props) {
   return (
-    <div className="container-fluid header section jumbotron">
+    <div className="container-fluid header section jumbotron" style={props.style} >
         <div className="container">
             <div className="row">
                 <div className="col-12">
