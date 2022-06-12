@@ -7,7 +7,6 @@
     "bootstrap": "^4.3.1",
     "lodash": "^4.17.21",
     "moment": "^2.29.3",
-    "node-sass": "^7.0.0",
     "react": "^16.10.2",
     "react-burger-menu": "^3.0.8",
     "react-dom": "^16.10.2",
@@ -35,5 +34,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "sass": "^1.52.3"
   }
 }
