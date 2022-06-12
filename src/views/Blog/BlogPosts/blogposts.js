@@ -1,11 +1,9 @@
 import React from 'react';
 import './blogposts.scss';
 import moment from 'moment';
-import { Link, useRouteMatch } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const BlogPosts = (props) => {
-    let { path } = useRouteMatch();
-    const blogPosts = props.blogPosts;
+const BlogPosts = ({ blogPosts }) => {
         return blogPosts.map((post) => {
             return ( 
                 <div className="col-12 blog-post" key={post.id}>
@@ -18,7 +16,7 @@ const BlogPosts = (props) => {
                     { post.excerpt &&
                         <p>{post.excerpt}</p>
                     }
-                    <p><Link to={`${path}/${post.id}`}>Read more</Link></p>
+                    <p><Link to={`${post.id}`}>Read more</Link></p>
                 </div>
             );
         });

@@ -7,7 +7,7 @@ import Footer from "./components/footer/footer";
 import BlogPost from './components/blog/blogPost/blogPost';
 import {
     BrowserRouter as Router,
-    Switch,
+    Routes,
     Route,
 } from "react-router-dom";
 import './App.scss';
@@ -18,18 +18,13 @@ function App() {
             <Router>
                 <NavBar />
                 <div className="wrapper" id="wrapper">
-                    <Switch>
-                        <Route exact path="/">
-                            <Home />
+                    <Routes>
+                        <Route path="/" element={ <Home />} />
+                        <Route path="about" element={ <About /> } />
+                        <Route path="blog/*" element= {<Blog />}>
+                            <Route path=":id" element={ <BlogPost />} />
                         </Route>
-                        <Route exact path="/about">
-                            <About />
-                        </Route>
-                        <Route exact path="/blog">
-                            <Blog />
-                        </Route>
-                        <Route path="/blog/:id" render={(props) => <BlogPost {...props} />} />
-                    </Switch>
+                    </Routes>
                 </div>
                 <Footer />
             </Router>
