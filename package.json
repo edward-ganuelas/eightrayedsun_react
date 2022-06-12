@@ -3,15 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@directus/sdk-js": "^6.0.0-alpha.6",
+    "@directus/sdk-js": "^6.3.0 ",
     "bootstrap": "^4.3.1",
     "lodash": "^4.17.21",
-    "moment": "^2.24.0",
-    "node-sass": "^4.13.1",
+    "moment": "^2.29.3",
     "react": "^16.10.2",
-    "react-burger-menu": "^2.6.11",
-    "react-dom": "^16.10.2",
-    "react-ga": "^2.7.0",
+    "react-burger-menu": "^3.0.8",
+    "react-dom": "^16.13.0",
+    "react-ga": "^3.3.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "4.0.3"
   },
@@ -35,5 +34,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "sass": "^1.52.3"
   }
 }
