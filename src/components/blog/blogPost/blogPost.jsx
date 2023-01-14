@@ -1,3 +1,4 @@
+import React from 'react';
 import client from '../../../directus';
 import './blogPost.scss';
 
