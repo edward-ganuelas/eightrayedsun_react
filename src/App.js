@@ -2,7 +2,7 @@ import React from 'react';
 import NavBar from "./components/navbar/navbar";
 import Home from "./views/Home/home";
 import About from "./views/About/about";
-import Blog from "./views/Blog/blog";
+// import Blog from "./views/Blog/blog";
 import Footer from "./components/footer/footer";
 import BlogPost from './components/blog/blogPost/blogPost';
 import {
@@ -25,9 +25,9 @@ function App() {
                         <Route exact path="/about">
                             <About />
                         </Route>
-                        <Route exact path="/blog">
+                        {/* <Route exact path="/blog">
                             <Blog />
-                        </Route>
+                        </Route> */}
                         <Route path="/blog/:id" render={(props) => <BlogPost {...props} />} />
                     </Switch>
                 </div>
