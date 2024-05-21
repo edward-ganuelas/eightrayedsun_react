@@ -9,7 +9,7 @@ const navBar = () => {
             <Menu right  pageWrapId={ "wrapper" } outerContainerId={ "App" }>
                 <Link to="/" className="menu-item">Home</Link>
                 <a href="/documents/Edward_Ganuelas_Resume_08_12_2019.pdf" className="menu-item" target="_blank" rel="noopener noreferrer">Resume</a>
-                <a href="/blog" className="menu-item">Blog</a>
+                {/* <a href="/blog" className="menu-item">Blog</a> */}
                 <a href="https://ca.linkedin.com/in/epganuelas" className="menu-item" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 <a href="http://pokedex.eightrayedsun.com" className="menu-item" target="_blank" rel="noopener noreferrer">Pokedex Project</a>
                 <Link to="/about" className="menu-item">About</Link>
